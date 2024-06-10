@@ -1,6 +1,6 @@
 # build-from-scratch
 
-build-from-scratch provides documentation on how to build open-source software (OSS) in the JavaScript ecosystem from scratch.
+build-from-scratch provides free tutorials on how to build open-source software (OSS) in the JavaScript ecosystem from scratch.
 
 ## Build from scratch interactively
 
