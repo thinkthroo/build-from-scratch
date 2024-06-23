@@ -20,3 +20,4 @@ on this repo.
 6. Build components page that shows these components built
 7. Build themes page that demonstrates 2 or 3 themes
 8. Build "Blocks" page with one example.
+9. CLI package to add Button, Card, Accordion into a project
