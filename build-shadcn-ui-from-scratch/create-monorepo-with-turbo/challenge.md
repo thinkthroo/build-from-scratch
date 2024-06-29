@@ -1,26 +1,38 @@
-# Create a monorepo with Turbo
+# Create a Monorepo with Turbo
 
-## Challenge:
+## Introduction
 
-1. Create and clone a Github repository to your local machine.
-2. Create a monorepo using Turbo.
-3. Understanding the monorepo.
-4. Push your code to Github 
+A Monorepo is a software development strategy where multiple projects, often related or dependent, are stored in a single repository.
+
+## Challenges:
+
+1. Understanding the Monorepo concept.
+2. Create and clone a Github repository to your local machine.
+3. Create a Monorepo using Turbo.
+4. Understanding Turbo Monorepo
+5. Push your code to GitHub 
 
 ## How to solve this challenge?
 
+### Understanding the Monorepo concept
+
+Before jumping into technical stuff, you need to understand the Monorepo concept first. Here are some resources to read:
+
+1. [Understanding Monorepos](https://monorepo.tools/)
+2. [What is Monorepo](https://semaphoreci.com/blog/what-is-monorepo)
+
 ### Create and clone a Github repository to your local machine
 
-Follow along the two guides below:
+Follow along with the two guides below:
 
 1. [Create a Github repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories)
 2. [Clone this newly created repository in your local machine](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
-###  Create a monorepo using Turbo
+###  Create a Monorepo using Turbo
 
-You should read [Turbo tutorial](https://turbo.build/repo/docs/getting-started/create-new#full-tutorial) and execute the steps provided in the docs and figure out how to create a monorepo.
+You should read [Turbo tutorial](https://turbo.build/repo/docs/getting-started/create-new#full-tutorial), execute the steps provided in the docs, and figure out how to create a Monorepo.
 
-### Understanding the monorepo
+### Understanding Turbo Monorepo
 
 Make sure you understand the following basics provided in the Turbo docs:
 
@@ -31,7 +43,7 @@ Make sure you understand the following basics provided in the Turbo docs:
 5. [Building with Turborepo](https://turbo.build/repo/docs/getting-started/create-new#5-building-with-turborepo)
 6. [Running dev scripts](https://turbo.build/repo/docs/getting-started/create-new#6-running-dev-scripts)
 
-### Push your code to Github:
+### Push your code to GitHub:
 
 Push your code to Github. You can refer to [this guide](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github?platform=mac) on how to push your changes to Github.
 
