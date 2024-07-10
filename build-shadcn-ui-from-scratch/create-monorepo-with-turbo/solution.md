@@ -16,7 +16,7 @@ You can finish this step by reading the suggested resources.
 
 ## 2. Create a Monorepo Using Turbo
 
-This guide provides the instructions to create a Monorepo using Turbo and helps you understand the turbo basics.
+This guide provides the instructions to create a Monorepo using Turbo (version 2.0.6) and helps you understand the turbo basics.
 
 ### Step 1: Create Turbo project
 

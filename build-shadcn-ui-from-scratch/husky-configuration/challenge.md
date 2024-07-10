@@ -1,4 +1,6 @@
-# Husky configuration 
+# Husky configuration
+
+## Introduction
 
 Shadcn-ui/ui uses husky to lint commit messages.
 
@@ -6,17 +8,25 @@ Shadcn-ui/ui uses husky to lint commit messages.
 
 Navigate to [shadcn-ui/ui](https://github.com/shadcn-ui/ui) and check the commit messages.
 
+Husky is an npm package that allows you to add Git hooks to your project. Git hooks are scripts that Git automatically executes before or after certain events, such as committing code or pushing changes to a repository.
+
+In this challenge, you will learn how to use Husky to lint and standardize your commit messages.
+
+## Prerequisites
+
+- Familiarity with Git and NPM
+
 ## Challenge
 
 1. Read the [husky documentation](https://typicode.github.io/husky/).
-2. Install the husky in your monorepo project.
+2. Install the husky in your Monorepo project.
 3. Figure out how to lint your commit messages.
 
 ## How to solve this challenge?
 
-### 1. Read the husky documentation
+### 1. Read the Husky documentation
 
-Head to husky documentation and read the [Get started section](https://typicode.github.io/husky/get-started.html).
+Head to Husky documentation and read the [Get started section](https://typicode.github.io/husky/get-started.html).
 
 ### 2. Install husky
 
@@ -28,4 +38,4 @@ Check the files inside [.husky](https://github.com/shadcn-ui/ui/tree/main/.husky
 
 ## Solution
 
-Feeling stuck or need help, you can check solution for this challenge
+Feeling stuck or need help? you can check the solution for this challenge.
