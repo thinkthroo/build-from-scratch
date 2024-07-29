@@ -1,58 +1,16 @@
-# Create a Monorepo with Turbo - Solution
+## Challenge - Understanding Turbo Monorepo
+In this challenge, you will have to understand how the monorepo works based on the project you created before. You have to read the codes and making sense of them.
 
-This challenge has 5 steps to complete:
+Make sure you understand the following basics provided in the Turbo docs:
 
-1. Understanding the Monorepo concept.
-2. Create a Monorepo using Turbo.
-3. Understanding Turbo Monorepo
-4. Push your codes to GitHub
+1. [Running create-turbo](https://turbo.build/repo/docs/getting-started/create-new#1-running-create-turbo)
+2. [Exploring your new repo](https://turbo.build/repo/docs/getting-started/create-new#2-exploring-your-new-repo)
+3. [Understanding turbo.json](https://turbo.build/repo/docs/getting-started/create-new#3-understanding-turbojson)
+4. [Linting with Turborepo](https://turbo.build/repo/docs/getting-started/create-new#4-linting-with-turborepo)
+5. [Building with Turborepo](https://turbo.build/repo/docs/getting-started/create-new#5-building-with-turborepo)
+6. [Running dev scripts](https://turbo.build/repo/docs/getting-started/create-new#6-running-dev-scripts)
 
-## 1. Understanding the Monorepo Concept
-
-You can finish this step by reading the suggested resources.
-
-1. [Understanding Monorepos](https://monorepo.tools/)
-2. [What is Monorepo](https://semaphoreci.com/blog/what-is-monorepo)
-
-## 2. Create a Monorepo Using Turbo
-
-This guide provides the instructions to create a Monorepo using Turbo (version 2.0.6) and helps you understand the turbo basics.
-
-### Step 1: Create Turbo project
-
-Make sure you are in the folder where you want to create the project and open it in the Command line. Run this below command:
-
-```
-npx create-turbo@latest
-```
-
-### Step 2: Enter y to install create-turbo:
-
-Press "y" when the CLI prompts to install create-turbo package.
-
-Once this package is installed, you will be prompted with the following questions on your CLI:
-
-### Step 3: Choose a folder location for your turborepo
-
-_Where would you like to create your turborepo?_
-
-![Create turbo prompt 1](./images/create-turbo-1.jpg)
-
-Enter a new folder name for your Turbo project.
-
-### Step 4: Choose a package manager:
-
-_Which package manager do you want to use?_
-
-![Create turbo prompt 2](./images/create-turbo-2.jpg)
-
-Turbo recommends pnpm. Choose pnpm as your package manager.
-
-After you choose the package manager, `create-turbo` package creates a bunch of files and folders inside your selected folder for Turborepo (Remember when you were asked this question above?) and also installs the dependencies that come with this basic example.
-
-![Create turbo prompt 3](./images/create-turbo-3.jpg)
-
-## 3. Understanding Turbo Monorepo
+## Solution
 
 When you create a new monorepo, `create-turbo` command gives you a description of folders it creates.
 
@@ -74,11 +32,11 @@ These folders are called workspaces. Each workspace has its own package.json, ru
 
 Open `package/ui/package.json` and you will find the name as `@repo/ui`.
 
-![package/ui/package.json](./images/ui-packagejson-name.jpg)
+![package/ui/package.json](./../images/ui-packagejson-name.jpg)
 
 If you open `apps/web/package.json` and `apps/docs/package.json`, you will find `@repo/ui` as a dependency.
 
-![apps/web/package.json](./images/web-packagejson-repo-ui.jpg)
+![apps/web/package.json](./../images/web-packagejson-repo-ui.jpg)
 
 `packages/ui` is a shared component library because `apps/web` and `apps/docs` depend on `packages/ui` for a consistent, single-design system
 
@@ -86,19 +44,19 @@ If you open `apps/web/package.json` and `apps/docs/package.json`, you will find 
 
 Inside `./apps/docs/app/page.tsx`, you will find the below import.
 
-![./apps/docs/app/page.tsx](./images/pagetsx.jpg)
+![./apps/docs/app/page.tsx](./../images/pagetsx.jpg)
 
 Button is imported from `@repo/ui/button` but, how is this exported from `packages/ui`?
 
 You will find `exports` field in `packages/ui/package.json`.
 
-![packages/ui/package.json](./images/ui-button-exports.jpg)
+![packages/ui/package.json](./../images/ui-button-exports.jpg)
 
 components from `packages/ui` are exported using the exports field.
 
 For example, when `apps/web` workspace file imports a shared component, say `Button`, from `packages/ui`, `exports` tells the `apps/web` workspace where to find this Button component.
 
-![Button component codes](./images/ui-button-codes.jpg)
+![Button component codes](./../images/ui-button-codes.jpg)
 
 ### typescript-config workspace
 
@@ -106,7 +64,7 @@ You will find that this workspace is named `@repo/typescript-config` in `package
 
 To share a single tsconfig.json across the monorepo, you can use this typescript-config workspace by importing `@repo/typescript-config/nextjs.json` in `apps/web/tsconfig.json`.
 
-![apps/web/tsconfig.json](./images/web-tsconfig-extends.jpg)
+![apps/web/tsconfig.json](./../images/web-tsconfig-extends.jpg)
 
 ### eslint-config workspace
 
@@ -114,7 +72,7 @@ You will find that this workspace is named `@repo/eslint-config` in `packages/es
 
 To share a single eslint config file across the Monorepo, you can use this eslint-config workspace by importing `@repo/eslint-config/next.js` in `apps/docs/.eslintrc.js`.
 
-![apps/docs/.eslintrc.js](./images/docs-eslint-extends.jpg)
+![apps/docs/.eslintrc.js](./../images/docs-eslint-extends.jpg)
 
 To summarise, the following list shows dependencies among workspaces:
 
@@ -178,15 +136,15 @@ Because workspaces such as `ui`, `docs` and `web` depend on eslint config provid
 
 #### lint script in `ui` workspace
 
-![ui lint script](./images/ui-lint-script.jpg)
+![ui lint script](./../images/ui-lint-script.jpg)
 
 #### lint script in `web` workspace
 
-![web lint script](./images/web-lint-script.jpg)
+![web lint script](./../images/web-lint-script.jpg)
 
 #### lint script in `docs` workspace
 
-![docs lint script](./images/docs-lint-script.jpg)
+![docs lint script](./../images/docs-lint-script.jpg)
 
 You will also see `0 cached, 3 total` in your CLI.
 
@@ -269,32 +227,3 @@ To run dev script in a specific workspace, use the below command.
 ```
 turbo dev --filter docs
 ```
-
-## 4. Push your codes to Github
-
-### Create a Repository in GitHub
-
-This video shows how you can create a GitHub repository.
-
-[Insert video execution. Loom or Github?]
-
-Or you can follow the official documentation to [create a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories).
-
-Please __do not__ check the 'Add a README file' option when creating a new repository, because you need to create an empty git repository.
-
-### Link Your Turbo Monorepo to the GitHub Repository
-
-When you create Turbo Monorepo with `npx create-turbo@latest`, it initializes a local Git repository by default.
-
-Now, After your new GitHub repository created, you can link your Turbo Monorepo with the GitHub repository.
-
-In the command line, go to your turbo project, and run this command.
-
-```
-git remote add origin git@github.com:<your-github-username>/<your-github-repo>.git
-git push -u origin main
-```
-
-If your PC is already authenticated to your GitHub account, the command above should be successful and your Turbo Monorepo is now pushed to GitHub. But, if it prompts an authentication request, you can insert your GitHub account credentials.
-
-You can read about GitHub Authentication [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github).
