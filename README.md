@@ -4,7 +4,7 @@ build-from-scratch provides free tutorials on how to build open-source software 
 
 ## Build from scratch interactively
 
-If you want to follow along these tutorials and save your progress, get the [free course](https://tthroo.com/build-from-scratch)
+If you want to follow along these tutorials and save your progress, get the [free course](https://thinkthroo.com/build-from-scratch)
 
 ## Why free?
 
